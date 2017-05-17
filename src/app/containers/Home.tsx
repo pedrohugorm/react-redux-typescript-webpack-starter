@@ -1,12 +1,19 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 
 import { Hello } from '../../lib/components/hello-world';
 
-const Home = () => (
-    <div>
-        <h1>Home :-)</h1>
-        <Hello name="Maxim" />
-    </div>
-);
+@connect()
+export default class Home extends  React.Component<any, any> {
 
-export default Home;
+    render() {
+
+        return (
+            <div>
+                <h1>Home Test</h1>
+                <Hello name="Pedro" />
+            </div>
+        );
+    }
+
+}
